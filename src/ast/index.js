@@ -1,5 +1,10 @@
 function* astNodes(start) {
+    start._scope = start.scope || []
+    
     if (start && start.type && start.range && start.range.length) {
+        start._uid = Math.random().toString(36).slice(2)
+        start._scope.push(start._uid)
+        
         yield start
     }
     
@@ -8,6 +13,10 @@ function* astNodes(start) {
     }
     
     for (const value of values(start)) {
-        yield* astNodes(value)
+        if (value !== start._scope && value !== start.range) {
+            value._scope = start._scope.slice()
+        
+            yield* astNodes(value)
+        }
     }    
 }
