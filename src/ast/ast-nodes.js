@@ -18,7 +18,7 @@ function* astNodes(start) {
     }
     
     for (const value of values(start)) {
-        if (value !== start._scope && value !== start.range) {
+        if (value !== start._scope && value !== start._parent && value !== start.range) {
             value._scope = start._scope.slice()
             value._parent = start
         
