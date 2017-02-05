@@ -1,4 +1,4 @@
-function* fork(...list)) {
+function* fork(...list) {
     const buff = []
     let iterable = buffer(list.pop(), buff)
     const gen = list.shift()
