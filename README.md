@@ -57,6 +57,25 @@ Generator utils to use in [repl.it](https://repl.it)
 ```html
     <script src="//rawgit.com/nhz-io/gen-utils/master/src/ast/ast-nodes.js"></script>
 ```
+* **providedIdentifiers** - https://rawgit.com/nhz-io/gen-utils/master/src/ast/provided-identifiers.js
+```html
+    <script src="//rawgit.com/nhz-io/gen-utils/master/src/ast/provided-identifiers.js"></script>
+```
+
+* **providers** - https://rawgit.com/nhz-io/gen-utils/master/src/ast/providers.js
+```html
+    <script src="//rawgit.com/nhz-io/gen-utils/master/src/ast/providers.js"></script>
+```
+
+* **consumedIdentifiers** - https://rawgit.com/nhz-io/gen-utils/master/src/ast/consumed-identifiers.js
+```html
+    <script src="//rawgit.com/nhz-io/gen-utils/master/src/ast/consumed-identifiers.js"></script>
+```
+
+* **consumers** - https://rawgit.com/nhz-io/gen-utils/master/src/ast/consumers.js
+```html
+    <script src="//rawgit.com/nhz-io/gen-utils/master/src/ast/consumers.js"></script>
+```
 * **One file** - https://rawgit.com/nhz-io/gen-utils/master/src/ast/index.js
 ```html
     <script src="//rawgit.com/nhz-io/gen-utils/master/src/ast/index.js"></script>
