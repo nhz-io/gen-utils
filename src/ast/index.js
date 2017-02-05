@@ -1,5 +1,5 @@
 function* astNodes(start) {
-    start._scope = start.scope || []
+    start._scope = start._scope || []
     
     if (start && start.type && start.range && start.range.length) {
         start._uid = Math.random().toString(36).slice(2)
