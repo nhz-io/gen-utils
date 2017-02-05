@@ -27,21 +27,25 @@ function* findR(fn, list) {
 }
 
 function* flatten(...list) {
-    for (const item of list) {
-        if (item && typeof item[Symbol.iterator] === 'function') {
-            const list = item
-            
-            for (const item of list) {
-                if (item && typeof item [Symbol.iterator] === 'function') {
-                    yield* flatten(item)
-                }
-                else {
-                    yield item
-                }
-            }
+    for (const arr of list) {
+        if (!arr || 
+            typeof arr === 'string' || 
+            typeof arr[Symbol.iterator] !== 'function'
+        ) {
+            yield arr
         }
         else {
-            yield item
+            for (const item of arr) {
+                if (!item || 
+                    typeof item === 'string' || 
+                    typeof item[Symbol.iterator] !== 'function'
+                ) {
+                    yield item
+                }
+                else {
+                    yield* flatten(item)
+                }
+            }
         }
     }
 }
