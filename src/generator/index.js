@@ -1,9 +1,9 @@
 function* regen(gen, list) {
     for (const item of list) {
-        yield* gen(item)
+        yield* gen.call(this, item)
     }
 }
 
 function* regenR(list, gen) {
-    yield* regen(gen, list)
+    yield* regen.call(this, gen, list)
 }
