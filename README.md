@@ -1,6 +1,13 @@
 # gen-utils
 Generator utils to use in [repl.it](https://repl.it)
 
+## One File
+
+* https://rawgit.com/nhz-io/gen-utils/master/src/index.js
+```html
+    <script src="//rawgit.com/nhz-io/gen-utils/master/src/index.js"></script>
+```
+
 ## Iterable
 
 * **filter** - https://rawgit.com/nhz-io/gen-utils/master/src/iterable/filter.js
