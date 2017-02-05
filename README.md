@@ -1,7 +1,7 @@
 # gen-utils
 Generator utils to use in [repl.it](https://repl.it)
 
-## Common
+## Iterable
 
 * **filter** - https://rawgit.com/nhz-io/gen-utils/master/src/iterable/filter.js
 ```html
