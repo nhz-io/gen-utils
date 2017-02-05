@@ -23,7 +23,7 @@ function* astNodes(start, parent) {
         
         if (!start.hasOwnProperty('scope')) {
             if (scopedTypes.indexOf(start.type) !== -1) {
-                let _scope = []
+                let _scope = [start]
 
                 Object.defineProperty(start, 'scope', {
                     get: () => {
@@ -47,17 +47,15 @@ function* astNodes(start, parent) {
                     get: () => start.parent.scope || [],
                 })
             }
+
+            if (start.parent.scope) {
+                start.parent.scope.push(start)
+            }
         }
 
         yield start
 
         parent = start
-        
-        if (start.parent.scope) {
-            start.parent.scope.push(start)
-        }
-
-        start.scope.push(start)
     }
 
     const ks = reject(keys(start), k => rejectedKeys.indexOf(k) !== -1 )
